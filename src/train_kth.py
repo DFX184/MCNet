@@ -78,7 +78,7 @@ def main(lr, batch_size, alpha, beta, image_size, K,
 
     counter = iters+1
     start_time = time.time()
-    num_iter = 1
+
     with Parallel(n_jobs=batch_size) as parallel:
       while iters < num_iter:
         mini_batches = get_minibatches_idx(len(trainfiles), batch_size, shuffle=True)
